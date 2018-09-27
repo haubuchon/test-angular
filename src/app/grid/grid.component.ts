@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { OperService } from '../oper.service'
+import { Observable, Subscription } from 'rxjs';
+import { OperData } from '../oper-data';
 
 @Component({
   selector: 'app-grid',
@@ -7,14 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GridComponent implements OnInit {
 
-  cities: String[] = ['Madrid', 'Paris', 'Berlin', 'Vancouver', 'Tokyo','Montréal', 'Toronto','Rome','New York'];
+  public tiles;
 
-  constructor() {}
+  constructor(private data: OperService) {}
 
   ngOnInit() {
+    this.data.getOperData().subscribe(ops => this.tiles = ops.Operations)
   }
 
-  cl(city) {
-    alert (city);
+  cl(tile) {
+    alert (tile);
   }
 }

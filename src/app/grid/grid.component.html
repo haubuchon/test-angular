@@ -1,3 +1,11 @@
-<mat-grid-list cols="3" rowHeight="100px">
-	<mat-grid-tile *ngFor="let city of cities" (click)="cl(city)">{{city}}</mat-grid-tile>
+<mat-grid-list cols="5" rowHeight="100px">
+	<mat-grid-tile *ngFor="let tile of tiles" (click)="cl(tile.ResourceId)">
+		<div fxLayout="column">
+			<div class="tilehead">{{tile.ResourceId}}</div>
+			<div fxLayout="row">
+				<div class="number">Pl:{{tile.PlannedHrs}}</div>
+				<div class="number">Re:{{tile.RealizedHrs}}</div>
+			</div>
+		</div>
+	</mat-grid-tile>
 </mat-grid-list>

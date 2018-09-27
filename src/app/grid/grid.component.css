@@ -1,3 +1,22 @@
 mat-grid-tile {
   background: lightblue;
 }
+
+.tilehead {
+  font-family: Arial;
+  font-size : 1.5em;
+  font-weight: bold;
+  color: #00a;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 4px;
+}
+
+.number {
+  font-family: Arial;
+  font-size : 1em;
+  color: #3b62cc;
+  font-weight: bold;
+  border: none 1px;
+  padding: 10px;
+}
