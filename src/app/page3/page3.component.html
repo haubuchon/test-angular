@@ -1,0 +1,21 @@
+<p>
+Liste des albums
+</p>
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+    <mat-cell *matCellDef="let album"> {{album.name}} </mat-cell>
+  </ng-container> 
+  <ng-container matColumnDef="artist">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Artist </mat-header-cell>
+    <mat-cell *matCellDef="let album"> {{album.artist}} </mat-cell>
+  </ng-container> 
+  <ng-container matColumnDef="year">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Year </mat-header-cell>
+    <mat-cell *matCellDef="let album"> {{album.year}} </mat-cell>
+  </ng-container> 
+  
+  <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: columnsToDisplay" (click)="cl(row.name)"></mat-row>
+
+</table>
