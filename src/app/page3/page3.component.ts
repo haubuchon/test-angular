@@ -2,6 +2,9 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSort, MatTableDataSource } from '@angular/material';
 import { AlbumsService } from '../albums.service';
 import { Album } from '../album';
+import { BaqService } from '../baq.service'
+import { Observable, Subscription } from 'rxjs';
+import { FactOrderss } from '../baqdata';
 
 @Component({
   selector: 'app-page3',
@@ -12,22 +15,19 @@ import { Album } from '../album';
 
 export class Page3Component implements OnInit {
 
-  albums: Album[];
-  columnsToDisplay: String[] = ['name', 'artist', 'year'];
+  private orders;
 
-  constructor(private albumservice: AlbumsService) {
+  columnsToDisplay: String[] = ['Month','AmountEol','AmountGen','ShippedEol','ShippedGen'];
+    
+  constructor(private data: BaqService) {
   }
 
   dataSource = new MatTableDataSource();
   @ViewChild(MatSort) sort: MatSort;
 
   ngOnInit() {
-    this.dataSource.data = this.albumservice.getAlbums();
+    this.data.getBaqData().subscribe(baq => this.dataSource.data = baq.Fact_Orderss)
     this.dataSource.sort = this.sort;
-  }
-
-  cl(city) {
-    alert(city);
   }
 
 }

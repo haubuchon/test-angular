@@ -1,18 +1,26 @@
 <p>
-Liste des albums
+Commandes mensuelles
 </p>
 <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
-  <ng-container matColumnDef="name">
-    <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
-    <mat-cell *matCellDef="let album"> {{album.name}} </mat-cell>
+  <ng-container matColumnDef="Month">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Mois </mat-header-cell>
+    <mat-cell *matCellDef="let order"> {{order.Month}} </mat-cell>
   </ng-container> 
-  <ng-container matColumnDef="artist">
-    <mat-header-cell *matHeaderCellDef mat-sort-header> Artist </mat-header-cell>
-    <mat-cell *matCellDef="let album"> {{album.artist}} </mat-cell>
+  <ng-container matColumnDef="AmountEol">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Montant EOL </mat-header-cell>
+    <mat-cell *matCellDef="let order"> {{order.AmountEol}} </mat-cell>
   </ng-container> 
-  <ng-container matColumnDef="year">
-    <mat-header-cell *matHeaderCellDef mat-sort-header> Year </mat-header-cell>
-    <mat-cell *matCellDef="let album"> {{album.year}} </mat-cell>
+  <ng-container matColumnDef="AmountGen">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Montant Gen </mat-header-cell>
+    <mat-cell *matCellDef="let order"> {{order.AmountGen}} </mat-cell>
+  </ng-container> 
+  <ng-container matColumnDef="ShippedEol">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Expédié EOL </mat-header-cell>
+    <mat-cell *matCellDef="let order"> {{order.ShippedEol}} </mat-cell>
+  </ng-container> 
+  <ng-container matColumnDef="ShippedGen">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Expédié GEN </mat-header-cell>
+    <mat-cell *matCellDef="let order"> {{order.ShippedGen}} </mat-cell>
   </ng-container> 
   
   <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
