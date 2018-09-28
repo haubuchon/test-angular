@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTableModule, MatSortModule, MatInputModule, MatSliderModule, MatGridListModule } from '@angular/material';
+import { MatTableModule, MatSortModule, MatInputModule, MatSliderModule, MatGridListModule, MatDatepickerModule, MatNativeDateModule } from '@angular/material';
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
@@ -41,6 +41,8 @@ import { SensorsComponent } from './sensors/sensors.component';
     MatInputModule, 
     MatSliderModule ,
     MatGridListModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
 
   ],
 

@@ -6,4 +6,9 @@
 	<input matInput placeholder="valeur"  type="number" [(ngModel)]="sv">
 </mat-form-field>
 <mat-slider [(ngModel)]="sv" thumbLabel></mat-slider>
+	<div fxLayout="row">
+		<input  fxFlex="200px" matInput [matDatepicker]="picker" placeholder="Choisir une date">
+		<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+		<mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+	</div>
 </div>
