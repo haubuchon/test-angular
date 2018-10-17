@@ -16,7 +16,8 @@ export class NavComponent implements OnInit {
     {desc: 'Tuiles', link: '/'},
     {desc: 'Contrôles', link: '/page2'},
     {desc: 'Données', link: '/page3'},
-    {desc: 'Senseurs', link: '/sensors'},
+    {desc: 'Senseurs', link: '/sensors'},   
+    {desc: 'Sommaire', link: '/page2'},
 
   ];
 }

@@ -17,6 +17,7 @@ import { Page3Component } from './page3/page3.component';
 import { AlbumsService } from './albums.service';
 import { Sensor1Service } from './sensor1.service';
 import { SensorsComponent } from './sensors/sensors.component';
+import { SommaireComponent } from './sommaire/sommaire.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { SensorsComponent } from './sensors/sensors.component';
     Page2Component,
     Page3Component,
     SensorsComponent,
+    SommaireComponent,
   ],
 
   imports: [
